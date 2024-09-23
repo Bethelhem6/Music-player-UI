@@ -61,7 +61,14 @@ class DetailScreen extends StatelessWidget {
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 border: Border.all(color: Colors.white)),
-                            child: const Icon(Icons.menu)),
+                            child:
+                                //  SvgPicture.asset("assets/images/favorite.svg",
+                                //   height: 30,
+                                //   colorFilter: const ColorFilter.mode(
+                                //     Colors.white,
+                                //     BlendMode.srcATop,
+                                //   ))
+                                const Icon(Icons.menu)),
                       ],
                     ),
                   ),

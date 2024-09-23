@@ -35,7 +35,9 @@ class HomeScreen extends StatelessWidget {
                       width: 45,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle, color: Colors.grey.shade700),
-                      child: const Icon(
+                      child: 
+                      
+                      const Icon(
                         Icons.notifications_outlined,
                         size: 30,
                       )),
