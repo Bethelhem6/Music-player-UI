@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:ui_challenge_1/screens/home_screen.dart';
+import 'package:flutter/material.dart'; 
+import 'package:ui_challenge_1/screens/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: const HomeScreen(),
+      home:  SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
