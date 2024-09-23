@@ -2,6 +2,7 @@ import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:ui_challenge_1/route.dart';
 import 'package:ui_challenge_1/screens/detail_screen.dart';
+import 'package:ui_challenge_1/screens/playlist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -35,15 +36,13 @@ class HomeScreen extends StatelessWidget {
                       width: 45,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle, color: Colors.grey.shade700),
-                      child: 
-                      
-                      const Icon(
+                      child: const Icon(
                         Icons.notifications_outlined,
                         size: 30,
                       )),
                 ],
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 10),
 
               // Recently Played Section
               const Text(
@@ -54,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(height: 18),
+              const SizedBox(height: 10),
               SizedBox(
                 height: 190,
                 child: ListView(
@@ -87,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 10),
 
               // Your Favorite Artists Section
               const Text(
@@ -103,33 +102,39 @@ class HomeScreen extends StatelessWidget {
                 height: 100,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: const [
-                    ArtistAvatar(
-                      name: 'Mercy Chinwo',
-                      imageUrl:
-                          'https://th.bing.com/th/id/OIP.lvbDeViorsW26baTZekKCgHaHa?rs=1&pid=ImgDetMain',
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            CustomPageRoute(child: const PlaylistScreen()));
+                      },
+                      child: const ArtistAvatar(
+                        name: 'Mercy Chinwo',
+                        imageUrl:
+                            'https://th.bing.com/th/id/OIP.lvbDeViorsW26baTZekKCgHaHa?rs=1&pid=ImgDetMain',
+                      ),
                     ),
-                    ArtistAvatar(
+                    const ArtistAvatar(
                       name: 'Cobhams',
                       imageUrl:
                           'https://th.bing.com/th/id/OIP.R1whFIB1-_kSMTwrb1FjhAHaHa?rs=1&pid=ImgDetMain',
                     ),
-                    ArtistAvatar(
+                    const ArtistAvatar(
                       name: 'Judikay',
                       imageUrl:
                           'https://th.bing.com/th/id/OIP.diaKO5YmyCjpCC0Y6K-JcgHaHa?rs=1&pid=ImgDetMain',
                     ),
-                    ArtistAvatar(
+                    const ArtistAvatar(
                       name: 'Moses Bliss',
                       imageUrl:
                           'https://th.bing.com/th/id/OIP.qMWscbueCiLB5i9e85nvuAHaFR?rs=1&pid=ImgDetMain',
                     ),
-                    ArtistAvatar(
+                    const ArtistAvatar(
                       name: 'Acid Rap',
                       imageUrl:
                           'https://th.bing.com/th/id/OIP.5d-km9DEpqlbvlydC5MINgHaF-?rs=1&pid=ImgDetMain',
                     ),
-                    ArtistAvatar(
+                    const ArtistAvatar(
                       name: 'Moses Bliss',
                       imageUrl:
                           'https://th.bing.com/th/id/OIP.qMWscbueCiLB5i9e85nvuAHaFR?rs=1&pid=ImgDetMain',
